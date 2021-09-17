@@ -20,7 +20,7 @@ Run all test case in project
 make test
 ```
 
-### Build
+### Local Build
 The result of building creates at example-build folder
 ```bash
 make run
@@ -35,4 +35,12 @@ Commands:
   start     [port]
   send      [input_json] [input_csv] [output_folder] [error_csv]
   version
+```
+
+### Docker Build
+Docker build on email-application image
+```bash
+docker build -t email-application .
+docker run -it -d --name console-application email-application:latest
+docker exec -it console-application ./email-application help
 ```

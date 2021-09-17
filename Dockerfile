@@ -10,5 +10,5 @@ RUN go mod download
 COPY . /console-application/
 
 # Build
-RUN go build -o email-application /console-application/cmd/
+RUN go build -o email-application /console-application/src/cmd/
 RUN chmod +x email-application
