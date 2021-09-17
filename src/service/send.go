@@ -58,7 +58,7 @@ func GetListCustomer(fileDir string, csvErrorFile string) ([]model.Customer, err
 			listCustomerError = append(listCustomerError, cus)
 		}
 
-		if cus[3] == "" {
+		if cus[3] == "" || !strings.Contains(cus[3], "@") {
 			listCustomerError = append(listCustomerError, cus)
 		} else {
 			customer := model.Customer{
